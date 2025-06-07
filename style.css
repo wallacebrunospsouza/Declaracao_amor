@@ -1,207 +1,179 @@
+/* Reset básico e fonte geral */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body,
 html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-    background: linear-gradient(to bottom, #000000, #ff0000);
-    font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom, #000000, #ff0000);
+  font-family: 'Arial', sans-serif;
 }
 
-#foto-amada {
-    pointer-events: none;
-    user-select: none;
-    animation: brilho 3s infinite alternate;
+/* Animação de brilho na foto */
+@keyframes brilho {
+  from {
+    box-shadow: 0 0 20px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 40px #ff0000;
+  }
 }
 
-.container {
-    min-height: 100vh;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+/* Telinha de início com o botão “Eu te amo” */
 #tela-inicial {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    position: relative;
-}
-
-@media (max-height: 500px) {
-    #tela-inicial {
-        height: auto;
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
 }
 
 #botao-amor {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 12px;
-    background-color: #ff0000;
-    color: rgb(0, 0, 0);
-    border: 2px solid #000000;
-    cursor: pointer;
-    transition: 0.3s;
-    max-width: 90%;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 12px;
+  background-color: #ff0000;
+  color: black;
+  border: 2px solid #000;
+  cursor: pointer;
+  transition: 0.3s;
+  max-width: 90%;
 }
 
 #botao-amor:hover {
-    background-color: #000000;
-    color: red;
+  background-color: #000;
+  color: red;
 }
 
+/* Declaração escondida no começo */
 #declaracao {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    padding: 60px 20px;
-    max-width: 100vw;
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #000000, #460101);
-    box-sizing: border-box;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #000000, #460101);
+  min-height: 100vh;
+  max-width: 100vw;
+  box-sizing: border-box;
 }
 
+/* Estilização da foto dela */
 #foto-amada {
-    width: 60vw;
-    max-width: 250px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    box-shadow: 0 0 15px #ff4d4d;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 60vw;
+  max-width: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 0 15px #ff4d4d;
+  animation: brilho 3s infinite alternate;
+  pointer-events: none;
+  user-select: none;
 }
 
+/* Caixinha do texto */
 #texto-declaracao {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    letter-spacing: 0.4px;
-    max-width: 90%;
-    color: #ffffff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 24px 28px;
-    border-radius: 20px;
-    font-family: 'Georgia', 'Times New Roman', serif;
-    text-align: justify;
-    white-space: normal;
-    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-    border: 2px solid black;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  letter-spacing: 0.4px;
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 24px 28px;
+  border-radius: 20px;
+  border: 2px solid black;
+  font-family: 'Georgia', serif;
+  text-align: justify;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+  margin-bottom: 30px;
+  max-width: 90%;
 }
 
+/* Emojis que vão cair do céu */
 .emoji {
-    position: fixed;
-    font-size: 28px;
-    animation: cair 4s linear infinite;
-    top: -50px;
-    pointer-events: none;
+  position: fixed;
+  font-size: 28px;
+  animation: cair 4s linear infinite;
+  top: -50px;
+  pointer-events: none;
 }
 
 @keyframes cair {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
 }
 
-@keyframes brilho {
-    from {
-        box-shadow: 0 0 20px #ff0000;
-    }
-
-    to {
-        box-shadow: 0 0 40px #ff0000;
-    }
-}
-
-audio {
-    display: none;
-}
-
-@media (max-width: 600px) {
-    #declaracao {
-        padding: 40px 10px 60px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #foto-amada {
-        width: 85vw;
-        max-width: none;
-        margin-bottom: 30px;
-    }
-
-    #texto-declaracao {
-        font-size: 0.85rem;
-        line-height: 2;
-        padding: 24px 20px;
-        max-width: 95vw;
-        text-align: justify;
-        background: rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-        margin: 0 auto;
-    }
-
-    #texto-declaracao p {
-        margin-bottom: 1.2em;
-        text-indent: 1.2em;
-    }
-
-    #botao-amor {
-        padding: 20px 40px;
-        font-size: 1.5rem;
-        max-width: 95%;
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.revelar {
-    animation: fadeInUp 1s ease-out forwards;
+/* Transição suave da tela inicial */
+@keyframes fadeBody {
+  0% {
+    background: linear-gradient(to bottom, #1a0f16, #1a0f16);
+  }
+  100% {
+    background: linear-gradient(to bottom, #1a0f16, #360220);
+  }
 }
 
 .fade-body {
-    animation: fadeBody 1.5s ease-in-out forwards;
+  animation: fadeBody 1.5s ease-in-out forwards;
 }
 
-@keyframes fadeBody {
-    0% {
-        background: linear-gradient(to bottom, #1a0f16, #1a0f16);
-    }
+/* Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    100% {
-        background: linear-gradient(to bottom, #1a0f16, #360220);
-    }
+.revelar {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Sumir com o player de áudio */
+audio {
+  display: none;
+}
+
+/* Responsivo para telas pequenas */
+@media (max-width: 600px) {
+  #declaracao {
+    padding: 40px 10px 60px;
+  }
+
+  #foto-amada {
+    width: 85vw;
+    max-width: none;
+    margin-bottom: 30px;
+  }
+
+  #texto-declaracao {
+    font-size: 0.85rem;
+    line-height: 2;
+    padding: 24px 20px;
+    max-width: 95vw;
+  }
+
+  #texto-declaracao p {
+    margin-bottom: 1.2em;
+    text-indent: 1.2em;
+  }
+
+  #botao-amor {
+    padding: 20px 40px;
+    font-size: 1.5rem;
+    max-width: 95%;
+  }
 }
