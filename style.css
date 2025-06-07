@@ -114,6 +114,10 @@ html {
     pointer-events: none;
 }
 
+#foto-amada {
+    animation: brilho 3s infinite alternate;
+}
+
 @keyframes cair {
     0% {
         transform: translateY(0);
@@ -123,6 +127,16 @@ html {
     100% {
         transform: translateY(100vh);
         opacity: 0;
+    }
+}
+
+@keyframes brilho {
+    from {
+        box-shadow: 0 0 20px #ff0000;
+    }
+
+    to {
+        box-shadow: 0 0 40px #ff0000, 0 0 60px #ff4d4d;
     }
 }
 
@@ -138,6 +152,10 @@ audio {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    #foto-amada {
+        animation: brilho 3s infinite alternate;
     }
 
     #foto-amada {
