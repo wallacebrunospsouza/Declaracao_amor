@@ -30,8 +30,25 @@ botao.addEventListener('click', () => {
 
     // música toca com leve atraso para sincronizar com a transição
     setTimeout(() => {
+        musica.volume = 0; // começa mudo
         musica.play();
+
+        const targetVolume = 0.7; // volume final (ajuste aqui se quiser)
+        const fadeDuration = 5000; // duração do fade em ms (5 segundos)
+        const fadeStep = 50; // intervalo para aumentar o volume em ms
+
+        let volume = 0;
+
+        const fadeAudio = setInterval(() => {
+            volume += (targetVolume * fadeStep) / fadeDuration;
+            if (volume >= targetVolume) {
+                volume = targetVolume;
+                clearInterval(fadeAudio);
+            }
+            musica.volume = volume;
+        }, fadeStep);
     }, 1000);
+
 
     declaracao.scrollIntoView({ behavior: 'smooth' });
 });
