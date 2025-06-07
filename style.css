@@ -127,10 +127,22 @@ audio {
 
 /* Responsividade para celular */
 @media (max-width: 600px) {
+    #declaracao {
+        padding: 40px 10px 60px;
+        box-sizing: border-box;
+        display: flex;
+        /* garantir flex */
+        flex-direction: column;
+        /* coluna */
+        align-items: center;
+        /* centraliza conteúdo */
+    }
+
     #foto-amada {
         width: 85vw;
-        /* foto maior no celular */
-        max-width: 250px;
+        /* foto maior */
+        max-width: none;
+        /* remove limite */
         margin-bottom: 30px;
         display: block;
         margin-left: auto;
@@ -138,27 +150,20 @@ audio {
     }
 
     #texto-declaracao {
-        font-size: 1.15rem;
-        line-height: 1.7;
-        padding: 20px;
-        max-width: 90vw;
-        color: #ffffff;
-        background: rgba(0, 0, 0, 0.5);
-        border-radius: 20px;
-        box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
-        margin: 0 auto;
-        text-align: justify;
+        font-size: 1.2rem;
+        line-height: 2;
+        padding: 24px 20px;
+        max-width: 95vw;
         white-space: normal;
+        /* importante para evitar quebras ruins */
+        text-align: justify;
         font-family: 'Georgia', 'Times New Roman', serif;
-    }
-
-    #declaracao {
-        padding: 40px 10px 60px;
-        align-items: center;
-    }
-
-    .emoji {
-        font-size: 24px;
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        margin: 0 auto;
+        display: block;
+        /* faz o texto ocupar o espaço natural */
     }
 
     #botao-amor {
@@ -167,6 +172,7 @@ audio {
         max-width: 95%;
     }
 }
+
 
 @keyframes revelar {
     0% {
