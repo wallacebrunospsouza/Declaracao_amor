@@ -57,6 +57,12 @@ botao.addEventListener('click', () => {
         }, fadeStep);
     }, 1000);
 
+    document.addEventListener('contextmenu', function (e) {
+        if (e.target.id === 'foto-amada') {
+            e.preventDefault();
+        }
+    });
+
 
     declaracao.scrollIntoView({ behavior: 'smooth' });
 });

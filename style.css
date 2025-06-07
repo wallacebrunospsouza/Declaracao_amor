@@ -12,6 +12,11 @@ html {
     font-family: 'Arial', sans-serif;
 }
 
+#foto-amada {
+    pointer-events: none;
+    user-select: none;
+}
+
 .container {
     min-height: 100vh;
     padding: 40px 20px;
@@ -142,6 +147,11 @@ audio {
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #foto-amada {
+        pointer-events: none;
+        user-select: none;
     }
 
     #texto-declaracao {
