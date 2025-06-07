@@ -61,14 +61,17 @@ html {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    /* <-- troque center por flex-start */
     margin: 0;
     padding: 60px 20px;
     max-width: 100vw;
     min-height: 100vh;
     background: linear-gradient(to bottom, #000000, #460101);
     box-sizing: border-box;
+
+    /* NOVO: para garantir largura do conteúdo */
+    width: 100%;
 }
+
 
 
 #foto-amada {
@@ -79,6 +82,13 @@ html {
     border-radius: 50%;
     margin-bottom: 20px;
     box-shadow: 0 0 20px #ff0000;
+}
+
+#foto-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
 }
 
 #texto-declaracao {
@@ -133,29 +143,33 @@ audio {
         margin-bottom: 30px;
     }
 
+    #declaracao {
+        padding: 40px 15px 60px;
+        box-sizing: border-box;
+        align-items: flex-start;
+        width: 100%;
+        /* Para evitar que comece no meio da tela */
+    }
+
     #texto-declaracao {
-        font-size: 1.2rem;
-        line-height: 2;
+        font-size: 1.3rem;
+        /* um pouco maior no celular */
+        line-height: 2.4;
+        /* mais espaçamento para ficar bonito */
         padding: 24px 20px;
-        /* padding lateral consistente */
-        max-width: 95vw;
+        max-width: 100%;
+        /* para usar toda a largura disponível */
         white-space: pre-wrap;
         text-align: justify;
         font-family: 'Georgia', 'Times New Roman', serif;
         border-radius: 20px;
-        background: rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-
-        margin: 0 auto;
-        /* centraliza horizontalmente o bloco */
+        background: rgba(0, 0, 0, 0.6);
+        /* fundo um pouco mais escuro */
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
+        margin: 0;
+        /* remover centralização automática */
     }
 
-    #declaracao {
-        padding: 40px 10px 60px;
-        /* menos padding lateral para evitar empurrar o texto */
-        box-sizing: border-box;
-        align-items: flex-start;
-    }
 
     .emoji {
         font-size: 24px;
