@@ -9,13 +9,14 @@
             box-sizing: border-box;
         }
 
-        body {
+        body,
+        html {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #ffdee9, #b5fffc);
-            font-family: 'Arial', sans-serif;
-            text-align: center;
+            height: 100%;
             overflow-x: hidden;
+            background: linear-gradient(to bottom, #000000, #ff0000);
+            font-family: 'Arial', sans-serif;
         }
 
         .container {
@@ -26,29 +27,55 @@
             align-items: center;
         }
 
+        #tela-inicial {
+            height: 100vh;
+            /* tela inicial ocupa toda a viewport */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        @media (max-height: 500px) {
+            #tela-inicial {
+                height: auto;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+        }
+
+
         #botao-amor {
             padding: 15px 30px;
             font-size: 1.2rem;
             border: none;
             border-radius: 12px;
-            background-color: #ff4f81;
-            color: white;
+            background-color: #ff0000;
+            color: rgb(0, 0, 0);
+            border: #000000, 2px solid;
             cursor: pointer;
             transition: 0.3s;
             max-width: 90%;
         }
 
         #botao-amor:hover {
-            background-color: #ff1e63;
+            background-color: #000000;
+            color: red;
         }
 
         #declaracao {
             display: none;
             flex-direction: column;
             align-items: center;
-            margin-top: 30px;
-            width: 100%;
+            margin: 0;
+            padding: 60px 20px;
+            max-width: 100vw;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #000000, #460101);
+            box-sizing: border-box;
         }
+
 
         #foto-amada {
             width: 60vw;
@@ -57,21 +84,26 @@
             object-fit: cover;
             border-radius: 50%;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px #ff4f81;
+            box-shadow: 0 0 20px #ff0000;
         }
 
         #texto-declaracao {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            letter-spacing: 0.4px;
             max-width: 90%;
-            color: #333;
-            background: rgba(255, 255, 255, 0.85);
-            padding: 20px;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 24px 28px;
             border-radius: 20px;
-            font-family: 'Georgia', serif;
-            text-align: left;
-            white-space: pre-line;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            font-family: 'Georgia', 'Times New Roman', serif;
+            text-align: justify;
+            white-space: pre-wrap;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+            border: 2px solid black;
+            backdrop-filter: blur(4px);
         }
+
 
         .emoji {
             position: fixed;
@@ -99,9 +131,8 @@
 
         /* 🌐 Responsividade para celular */
         @media (max-width: 600px) {
-            #botao-amor {
-                font-size: 1rem;
-                padding: 12px 20px;
+            #foto-amada {
+                width: 70vw;
             }
 
             #texto-declaracao {
@@ -117,60 +148,99 @@
                 font-size: 24px;
             }
         }
+
+        @keyframes revelar {
+            0% {
+                opacity: 0;
+                transform: translateY(100px) scale(0.9);
+                filter: blur(8px);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateY(30px) scale(1.02);
+                filter: blur(3px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        .revelar {
+            animation: revelar 2.5s cubic-bezier(0.25, 1, 0.3, 1) forwards;
+        }
+
+
+        .fade-body {
+            animation: fadeBody 1.5s ease-in-out forwards;
+        }
+
+        @keyframes fadeBody {
+            0% {
+                background: linear-gradient(to bottom, #1a0f16, #1a0f16);
+            }
+
+            100% {
+                background: linear-gradient(to bottom, #1a0f16, #360220);
+            }
+        }
     </style>
 
 </head>
 
 <body>
-    <div class="container">
-        <button id="botao-amor">Clique para ver</button>
-
-        <div id="declaracao">
-            <img id="foto-amada" src="WhatsApp Image 2025-06-07 at 13.34.41 (1).jpeg" alt="Foto da pessoa amada">
-            <p id="texto-declaracao">
-                <!-- Escreva sua declaração aqui -->
-                Graciosa Infindade,
-                Rainha Absoluta do Meu Coração (e da minha senha do meu Discord, Instagram, Email e do que mais
-                mesmo??),
-
-                Hoje, 08/06/2025, completamos UM ANO de namoro! Isso mesmo: 365 dias desde que você, em um momento de
-                clarividência divina ou leve surto romântico e talvez alguma loucura (ainda não sei), aceitou namorar
-                comigo — o seu amado, fiel, e levemente submisso Lixo Reciclável. (Lembra desse apelido? :3)
-
-                E olha… que reciclagem bem feita, hein? Você pegou esse entulho emocional (completamente esquisito) aqui
-                e transformou em namorado (quase) decente. Milagre da natureza ou pura paciência feminina? Provavelmente
-                os dois.
-
-                Durante esse ano, aprendi muitas coisas:
-
-                Que "tô com saudades" nunca é só um aviso, é um alerta vermelho.
-
-                Que "tanto faz" não significa tanto faz.
-
-                E que, sim, dizer "sim, amor" resolve 90% dos conflitos. (Os outros 10% a gente com o carinho ou
-                transando).
-
-                Mas a verdade é que, no meio de todas as nossas piadas, apelidos malucos e seus comandos que eu sigo sem
-                hesitar (as vezes sem hesitar), eu encontrei o amor da minha vida. A minha graciosa infinitude de
-                sentimentos bons, a minha paz caótica, a minha Tayla.
-
-                Você é o melhor erro de cálculo do cupido. A coincidência mais certeira do destino. A rainha que manda,
-                e eu, seu súdito feliz :3
-
-                Obrigado por ser minha companheira, minha terapeuta não licenciada e não nega, você é sim, minha melhor
-                amiga, e minha chefe emocional. Eu amo ser seu namorado — e se for pra passar mais mil anos ouvindo você
-                me chamar de bb, momozi, nenem, que seja. Só não me joga fora, tá? TvT
-
-                Feliz 1 ano, meu amor. Que venham muitos mais — com você mandando, e eu obedecendo (com amor, claro).
-
-                Do seu eterno capacho apaixonado,
-                Lixo reciclavel, bb, momozi, nenem, moh, mozinho, amor, anjo, anjinho, anju, idiota, cara, mano, noivo,
-                futuro marido, futuro pai dos nossos filhos, Wallace.
-            </p>
-        </div>
-
-        <audio id="musica" src="sua-musica.mp3" loop autoplay></audio>
+    <div id="tela-inicial">
+        <button id="botao-amor">Eu te amo</button>
     </div>
+    <div id="declaracao">
+        <img id="foto-amada" src="WhatsApp Image 2025-06-07 at 13.34.41 (1).jpeg" alt="Foto da pessoa amada">
+        <p id="texto-declaracao">
+            <!-- Escreva sua declaração aqui -->
+            Graciosa Infindade,
+            Rainha Absoluta do Meu Coração (e da minha senha do meu Discord, Instagram, Email e do que mais
+            mesmo??),
+
+            Hoje, 08/06/2025, completamos UM ANO de namoro! Isso mesmo: 365 dias desde que você, em um momento de
+            clarividência divina ou leve surto romântico e talvez alguma loucura (ainda não sei), aceitou namorar
+            comigo — o seu amado, fiel, e levemente submisso Lixo Reciclável. (Lembra desse apelido? :3)
+
+            E olha… que reciclagem bem feita, hein? Você pegou esse entulho emocional (completamente esquisito) aqui
+            e transformou em namorado (quase) decente. Milagre da natureza ou pura paciência feminina? Provavelmente
+            os dois.
+
+            Durante esse ano, aprendi muitas coisas:
+
+            Que "tô com saudades" nunca é só um aviso, é um alerta vermelho.
+
+            Que "tanto faz" não significa tanto faz.
+
+            E que, sim, dizer "sim, amor" resolve 90% dos conflitos. (Os outros 10% a gente resolve com o carinho ou
+            transando).
+
+            Mas a verdade é que, no meio de todas as nossas piadas, apelidos malucos e seus comandos que eu sigo sem
+            hesitar (as vezes sem hesitar), eu encontrei o amor da minha vida. A minha graciosa infinitude de
+            sentimentos bons, a minha paz caótica, a minha Tayla.
+
+            Você é o melhor erro de cálculo do cupido. A coincidência mais certeira do destino. A rainha que manda,
+            e eu, seu súdito feliz :3
+
+            Obrigado por ser minha companheira, minha terapeuta não licenciada e não nega, você é sim, minha melhor
+            amiga, e minha chefe emocional. Eu amo ser seu namorado — e se for pra passar mais mil anos ouvindo você
+            me chamar de bb, momozi, nenem, que seja. Só não me joga fora, tá? TvT
+
+            Feliz 1 ano, meu amor. Que venham muitos mais — com você mandando, e eu obedecendo (com amor, claro).
+
+            Do seu eterno capacho apaixonado,
+            Lixo reciclavel, bb, momozi, nenem, moh, mozinho, amor, anjo, anjinho, anju, idiota, cara, mano, noivo,
+            futuro marido, futuro pai dos nossos filhos, Wallace.
+        </p>
+    </div>
+
+    <audio id="musica" src="sua-musica.mp3" loop autoplay></audio>
+
 
     <script>
         const botao = document.getElementById('botao-amor');
@@ -195,11 +265,23 @@
         }
 
         botao.addEventListener('click', () => {
-            botao.style.display = 'none';
-            declaracao.style.display = 'flex';
-            musica.play();
-            iniciarChuvaDeEmojis('❤️'); // Você pode trocar por 💋, 🥰, etc.
+            document.body.classList.add('fade-body'); // muda o fundo
+
+            document.getElementById('tela-inicial').style.display = 'none'; // esconde botão
+            declaracao.style.display = 'flex'; // mostra conteúdo
+            declaracao.classList.add('revelar'); // adiciona a animação cinematográfica
+
+            iniciarChuvaDeEmojis('🌹');
+
+            // música toca com leve atraso para sincronizar com a transição
+            setTimeout(() => {
+                musica.play();
+            }, 1000);
+
+            declaracao.scrollIntoView({ behavior: 'smooth' });
         });
+
+
     </script>
 </body>
 
