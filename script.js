@@ -18,31 +18,37 @@ function criarEmojiChuva(emoji, isMobile) {
     }, duracao * 1000);
 }
 
-
 function iniciarChuvaDeEmojis(emoji) {
     const isMobile = window.innerWidth <= 768;
-    const intervalo = isMobile ? 600 : 200;
+    const intervalo = isMobile ? 1000 : 600;
+    let contador = 0;
+    const maxEmojis = 20;
 
-    setInterval(() => criarEmojiChuva(emoji, isMobile), intervalo);
+    const emojiInterval = setInterval(() => {
+        if (contador >= maxEmojis) {
+            clearInterval(emojiInterval);
+            return;
+        }
+        criarEmojiChuva(emoji, isMobile);
+        contador++;
+    }, intervalo);
 }
 
-
 botao.addEventListener('click', () => {
-    document.body.classList.add('fade-body'); 
-
-    document.getElementById('tela-inicial').style.display = 'none'; 
-    declaracao.style.display = 'flex'; 
-    declaracao.classList.add('revelar'); 
+    document.body.classList.add('fade-body');
+    document.getElementById('tela-inicial').style.display = 'none';
+    declaracao.style.display = 'flex';
+    declaracao.classList.add('revelar');
     iniciarChuvaDeEmojis('🌹');
     iniciarChuvaDeEmojis('❤️');
 
     setTimeout(() => {
-        musica.volume = 0; 
+        musica.volume = 0;
         musica.play();
 
         const targetVolume = 0.7;
-        const fadeDuration = 5000; 
-        const fadeStep = 50; 
+        const fadeDuration = 5000;
+        const fadeStep = 50;
         let volume = 0;
 
         const fadeAudio = setInterval(() => {
@@ -61,7 +67,5 @@ botao.addEventListener('click', () => {
         }
     });
 
-
     declaracao.scrollIntoView({ behavior: 'smooth' });
 });
-

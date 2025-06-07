@@ -15,6 +15,7 @@ html {
 #foto-amada {
     pointer-events: none;
     user-select: none;
+    animation: brilho 3s infinite alternate;
 }
 
 .container {
@@ -27,7 +28,6 @@ html {
 
 #tela-inicial {
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,7 +80,7 @@ html {
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
-    box-shadow: 0 0 20px #ff0000;
+    box-shadow: 0 0 15px #ff4d4d;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -92,15 +92,14 @@ html {
     letter-spacing: 0.4px;
     max-width: 90%;
     color: #ffffff;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
     padding: 24px 28px;
     border-radius: 20px;
     font-family: 'Georgia', 'Times New Roman', serif;
     text-align: justify;
     white-space: normal;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
     border: 2px solid black;
-    backdrop-filter: blur(4px);
     margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -112,10 +111,6 @@ html {
     animation: cair 4s linear infinite;
     top: -50px;
     pointer-events: none;
-}
-
-#foto-amada {
-    animation: brilho 3s infinite alternate;
 }
 
 @keyframes cair {
@@ -136,7 +131,7 @@ html {
     }
 
     to {
-        box-shadow: 0 0 40px #ff0000, 0 0 60px #ff4d4d;
+        box-shadow: 0 0 40px #ff0000;
     }
 }
 
@@ -144,55 +139,34 @@ audio {
     display: none;
 }
 
-/* Responsividade para celular */
 @media (max-width: 600px) {
     #declaracao {
         padding: 40px 10px 60px;
-        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     #foto-amada {
-        animation: brilho 3s infinite alternate;
-    }
-
-    #foto-amada {
         width: 85vw;
         max-width: none;
         margin-bottom: 30px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #foto-amada {
-        pointer-events: none;
-        user-select: none;
     }
 
     #texto-declaracao {
         font-size: 0.85rem;
-
         line-height: 2;
         padding: 24px 20px;
         max-width: 95vw;
         text-align: justify;
-        white-space: normal;
-        font-family: 'Georgia', 'Times New Roman', serif;
-        border-radius: 20px;
         background: rgba(0, 0, 0, 0.5);
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+        box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
         margin: 0 auto;
-        display: block;
     }
-
 
     #texto-declaracao p {
         margin-bottom: 1.2em;
         text-indent: 1.2em;
-
     }
 
     #botao-amor {
@@ -202,30 +176,20 @@ audio {
     }
 }
 
-
-
-@keyframes revelar {
-    0% {
+@keyframes fadeInUp {
+    from {
         opacity: 0;
-        transform: translateY(100px) scale(0.9);
-        filter: blur(8px);
+        transform: translateY(30px);
     }
 
-    50% {
-        opacity: 0.5;
-        transform: translateY(30px) scale(1.02);
-        filter: blur(3px);
-    }
-
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0) scale(1);
-        filter: blur(0);
+        transform: translateY(0);
     }
 }
 
 .revelar {
-    animation: revelar 2.5s cubic-bezier(0.25, 1, 0.3, 1) forwards;
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .fade-body {
