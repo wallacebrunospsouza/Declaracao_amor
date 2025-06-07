@@ -84,12 +84,6 @@ html {
     box-shadow: 0 0 20px #ff0000;
 }
 
-#foto-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-}
 
 #texto-declaracao {
     font-size: 1.2rem;
@@ -102,10 +96,16 @@ html {
     border-radius: 20px;
     font-family: 'Georgia', 'Times New Roman', serif;
     text-align: justify;
-    white-space: pre-wrap;
+    white-space: normal;
+    /* aqui também */
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
     border: 2px solid black;
     backdrop-filter: blur(4px);
+    margin-bottom: 30px;
+}
+#texto-declaracao p {
+    margin: 0;
+    padding: 0;
 }
 
 
@@ -138,9 +138,14 @@ audio {
     #foto-amada {
         width: 85vw;
         /* foto maior no celular */
-        max-width: none;
-        /* remove limite pequeno */
+        max-width: 250px;
+        /* limite máximo pra não ficar gigante */
+        height: auto;
         margin-bottom: 30px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza a foto */
     }
 
     #declaracao {
@@ -152,22 +157,23 @@ audio {
     }
 
     #texto-declaracao {
-        font-size: 1.3rem;
-        /* um pouco maior no celular */
-        line-height: 2.4;
-        /* mais espaçamento para ficar bonito */
-        padding: 24px 20px;
-        max-width: 100%;
-        /* para usar toda a largura disponível */
-        white-space: pre-wrap;
-        text-align: justify;
-        font-family: 'Georgia', 'Times New Roman', serif;
+        font-size: 1.15rem;
+        /* tamanho um pouco menor pra celular */
+        line-height: 1.7;
+        /* espaçamento confortável */
+        padding: 20px;
+        max-width: 90vw;
+        /* largura ajustada para a tela */
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
-        background: rgba(0, 0, 0, 0.6);
-        /* fundo um pouco mais escuro */
-        box-shadow: 0 0 30px rgba(255, 0, 0, 0.6);
-        margin: 0;
-        /* remover centralização automática */
+        box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+        margin: 0 auto;
+        text-align: justify;
+        /* texto justificado para alinhamento elegante */
+        white-space: normal;
+        /* deixa o texto quebrar naturalmente */
+        font-family: 'Georgia', 'Times New Roman', serif;
     }
 
 
