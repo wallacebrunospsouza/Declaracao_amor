@@ -103,10 +103,7 @@ html {
     backdrop-filter: blur(4px);
     margin-bottom: 30px;
 }
-#texto-declaracao p {
-    margin: 0;
-    padding: 0;
-}
+
 
 
 .emoji {
