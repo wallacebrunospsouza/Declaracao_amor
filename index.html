@@ -1,12 +1,126 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declração de amor</title>
+  <meta charset="UTF-8">
+  <title>Minha Declaração de Amor</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #ffdee9, #b5fffc);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #botao-amor {
+      padding: 20px 40px;
+      font-size: 24px;
+      border: none;
+      border-radius: 12px;
+      background-color: #ff4f81;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #botao-amor:hover {
+      background-color: #ff1e63;
+    }
+
+    #declaracao {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    #foto-amada {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px #ff4f81;
+    }
+
+    #texto-declaracao {
+      font-size: 20px;
+      max-width: 600px;
+      color: #333;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .emoji {
+      position: fixed;
+      font-size: 32px;
+      animation: cair 4s linear infinite;
+      top: -50px;
+    }
+
+    @keyframes cair {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(100vh); opacity: 0; }
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    
-    
+  <div class="container">
+    <button id="botao-amor">Clique para ver</button>
+
+    <div id="declaracao">
+      <img id="foto-amada" src="sua-imagem.jpg" alt="Foto da pessoa amada">
+      <p id="texto-declaracao">
+        <!-- Escreva sua declaração aqui -->
+        Você é a razão do meu sorriso todos os dias. Eu te amo mais do que palavras podem expressar. 💖
+      </p>
+    </div>
+
+    <audio id="musica" src="sua-musica.mp3" loop autoplay></audio>
+  </div>
+
+  <script>
+    const botao = document.getElementById('botao-amor');
+    const declaracao = document.getElementById('declaracao');
+    const musica = document.getElementById('musica');
+
+    function criarEmojiChuva(emoji) {
+      const elemento = document.createElement('div');
+      elemento.classList.add('emoji');
+      elemento.textContent = emoji;
+      elemento.style.left = Math.random() * 100 + 'vw';
+      elemento.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(elemento);
+
+      setTimeout(() => {
+        elemento.remove();
+      }, 5000);
+    }
+
+    function iniciarChuvaDeEmojis(emoji) {
+      setInterval(() => criarEmojiChuva(emoji), 200);
+    }
+
+    botao.addEventListener('click', () => {
+      botao.style.display = 'none';
+      declaracao.style.display = 'flex';
+      musica.play();
+      iniciarChuvaDeEmojis('❤️'); // Você pode trocar por 💋, 🥰, etc.
+    });
+  </script>
 </body>
 </html>
