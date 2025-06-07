@@ -131,18 +131,13 @@ audio {
         padding: 40px 10px 60px;
         box-sizing: border-box;
         display: flex;
-        /* garantir flex */
         flex-direction: column;
-        /* coluna */
         align-items: center;
-        /* centraliza conteúdo */
     }
 
     #foto-amada {
         width: 85vw;
-        /* foto maior */
         max-width: none;
-        /* remove limite */
         margin-bottom: 30px;
         display: block;
         margin-left: auto;
@@ -150,20 +145,27 @@ audio {
     }
 
     #texto-declaracao {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
+        /* fonte um pouco menor */
         line-height: 2;
         padding: 24px 20px;
         max-width: 95vw;
-        white-space: normal;
-        /* importante para evitar quebras ruins */
         text-align: justify;
+        white-space: normal;
         font-family: 'Georgia', 'Times New Roman', serif;
         border-radius: 20px;
         background: rgba(0, 0, 0, 0.5);
         box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
         margin: 0 auto;
         display: block;
-        /* faz o texto ocupar o espaço natural */
+    }
+
+    /* Aplica estilo para parágrafos dentro do texto */
+    #texto-declaracao p {
+        margin-bottom: 1.2em;
+        /* espaçamento entre parágrafos */
+        text-indent: 1.2em;
+        /* recuo no início do parágrafo */
     }
 
     #botao-amor {
@@ -172,6 +174,7 @@ audio {
         max-width: 95%;
     }
 }
+
 
 
 @keyframes revelar {
