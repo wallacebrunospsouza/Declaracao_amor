@@ -134,24 +134,25 @@ audio {
 
     #texto-declaracao {
         font-size: 1.2rem;
-        /* texto maior e mais confortável */
         line-height: 2;
-        /* espaçamento maior para leitura */
-        padding: 24px 28px;
-        /* padding mais generoso */
+        padding: 24px 20px;
+        /* padding lateral consistente */
         max-width: 95vw;
-        /* texto usa quase toda a largura */
         white-space: pre-wrap;
-        /* mantém quebras de linha */
         text-align: justify;
-        /* texto justificado, estilo carta */
         font-family: 'Georgia', 'Times New Roman', serif;
-        /* fonte elegante */
         border-radius: 20px;
         background: rgba(0, 0, 0, 0.5);
-        /* fundo um pouco mais escuro */
         box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+
+        margin: 0 auto;
+        /* centraliza horizontalmente o bloco */
     }
+
+    #declaracao {
+    padding: 40px 10px 60px; /* menos padding lateral para evitar empurrar o texto */
+    box-sizing: border-box;
+}
 
     .emoji {
         font-size: 24px;
