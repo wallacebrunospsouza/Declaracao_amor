@@ -38,7 +38,6 @@ html {
     }
 }
 
-
 #botao-amor {
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -46,7 +45,7 @@ html {
     border-radius: 12px;
     background-color: #ff0000;
     color: rgb(0, 0, 0);
-    border: #000000, 2px solid;
+    border: 2px solid #000000;
     cursor: pointer;
     transition: 0.3s;
     max-width: 90%;
@@ -60,19 +59,14 @@ html {
 #declaracao {
     display: none;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin: 0;
     padding: 60px 20px;
     max-width: 100vw;
     min-height: 100vh;
     background: linear-gradient(to bottom, #000000, #460101);
     box-sizing: border-box;
-
-    /* NOVO: para garantir largura do conteúdo */
-    width: 100%;
 }
-
-
 
 #foto-amada {
     width: 60vw;
@@ -82,8 +76,10 @@ html {
     border-radius: 50%;
     margin-bottom: 20px;
     box-shadow: 0 0 20px #ff0000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
-
 
 #texto-declaracao {
     font-size: 1.2rem;
@@ -97,14 +93,13 @@ html {
     font-family: 'Georgia', 'Times New Roman', serif;
     text-align: justify;
     white-space: normal;
-    /* aqui também */
     box-shadow: 0 0 25px rgba(255, 0, 0, 0.3);
     border: 2px solid black;
     backdrop-filter: blur(4px);
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-
 
 .emoji {
     position: fixed;
@@ -130,49 +125,37 @@ audio {
     display: none;
 }
 
-/* 🌐 Responsividade para celular */
+/* Responsividade para celular */
 @media (max-width: 600px) {
     #foto-amada {
         width: 85vw;
         /* foto maior no celular */
         max-width: 250px;
-        /* limite máximo pra não ficar gigante */
-        height: auto;
         margin-bottom: 30px;
         display: block;
         margin-left: auto;
         margin-right: auto;
-        /* centraliza a foto */
-    }
-
-    #declaracao {
-        padding: 40px 15px 60px;
-        box-sizing: border-box;
-        align-items: flex-start;
-        width: 100%;
-        /* Para evitar que comece no meio da tela */
     }
 
     #texto-declaracao {
         font-size: 1.15rem;
-        /* tamanho um pouco menor pra celular */
         line-height: 1.7;
-        /* espaçamento confortável */
         padding: 20px;
         max-width: 90vw;
-        /* largura ajustada para a tela */
         color: #ffffff;
         background: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
         margin: 0 auto;
         text-align: justify;
-        /* texto justificado para alinhamento elegante */
         white-space: normal;
-        /* deixa o texto quebrar naturalmente */
         font-family: 'Georgia', 'Times New Roman', serif;
     }
 
+    #declaracao {
+        padding: 40px 10px 60px;
+        align-items: center;
+    }
 
     .emoji {
         font-size: 24px;
@@ -180,11 +163,8 @@ audio {
 
     #botao-amor {
         padding: 20px 40px;
-        /* aumenta o tamanho do botão */
         font-size: 1.5rem;
-        /* aumenta a fonte para ficar mais legível */
         max-width: 95%;
-        /* ocupa quase toda a largura disponível */
     }
 }
 
@@ -211,7 +191,6 @@ audio {
 .revelar {
     animation: revelar 2.5s cubic-bezier(0.25, 1, 0.3, 1) forwards;
 }
-
 
 .fade-body {
     animation: fadeBody 1.5s ease-in-out forwards;
