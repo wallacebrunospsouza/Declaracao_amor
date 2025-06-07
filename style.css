@@ -125,16 +125,32 @@ audio {
 /* 🌐 Responsividade para celular */
 @media (max-width: 600px) {
     #foto-amada {
-        width: 70vw;
+        width: 85vw;
+        /* foto maior no celular */
+        max-width: none;
+        /* remove limite pequeno */
+        margin-bottom: 30px;
     }
 
     #texto-declaracao {
-        font-size: 1rem;
-        padding: 16px;
-    }
-
-    #foto-amada {
-        width: 70vw;
+        font-size: 1.2rem;
+        /* texto maior e mais confortável */
+        line-height: 2;
+        /* espaçamento maior para leitura */
+        padding: 24px 28px;
+        /* padding mais generoso */
+        max-width: 95vw;
+        /* texto usa quase toda a largura */
+        white-space: pre-wrap;
+        /* mantém quebras de linha */
+        text-align: justify;
+        /* texto justificado, estilo carta */
+        font-family: 'Georgia', 'Times New Roman', serif;
+        /* fonte elegante */
+        border-radius: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        /* fundo um pouco mais escuro */
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
     }
 
     .emoji {
