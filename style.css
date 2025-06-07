@@ -27,7 +27,7 @@ html {
 
 #tela-inicial {
     height: 100vh;
-    /* tela inicial ocupa toda a viewport */
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,7 +157,6 @@ audio {
     #texto-declaracao {
         font-size: 0.85rem;
 
-        /* fonte um pouco menor */
         line-height: 2;
         padding: 24px 20px;
         max-width: 95vw;
@@ -171,12 +170,11 @@ audio {
         display: block;
     }
 
-    /* Aplica estilo para parágrafos dentro do texto */
+
     #texto-declaracao p {
         margin-bottom: 1.2em;
-        /* espaçamento entre parágrafos */
         text-indent: 1.2em;
-        /* recuo no início do parágrafo */
+
     }
 
     #botao-amor {

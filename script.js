@@ -28,23 +28,21 @@ function iniciarChuvaDeEmojis(emoji) {
 
 
 botao.addEventListener('click', () => {
-    document.body.classList.add('fade-body'); // muda o fundo
+    document.body.classList.add('fade-body'); 
 
-    document.getElementById('tela-inicial').style.display = 'none'; // esconde botão
-    declaracao.style.display = 'flex'; // mostra conteúdo
-    declaracao.classList.add('revelar'); // adiciona a animação cinematográfica
-
+    document.getElementById('tela-inicial').style.display = 'none'; 
+    declaracao.style.display = 'flex'; 
+    declaracao.classList.add('revelar'); 
     iniciarChuvaDeEmojis('🌹');
+    iniciarChuvaDeEmojis('❤️');
 
-    // música toca com leve atraso para sincronizar com a transição
     setTimeout(() => {
-        musica.volume = 0; // começa mudo
+        musica.volume = 0; 
         musica.play();
 
-        const targetVolume = 0.7; // volume final (ajuste aqui se quiser)
-        const fadeDuration = 5000; // duração do fade em ms (5 segundos)
-        const fadeStep = 50; // intervalo para aumentar o volume em ms
-
+        const targetVolume = 0.7;
+        const fadeDuration = 5000; 
+        const fadeStep = 50; 
         let volume = 0;
 
         const fadeAudio = setInterval(() => {
