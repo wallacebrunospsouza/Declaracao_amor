@@ -140,6 +140,15 @@ audio {
     .emoji {
         font-size: 24px;
     }
+
+    #botao-amor {
+        padding: 20px 40px;
+        /* aumenta o tamanho do botão */
+        font-size: 1.5rem;
+        /* aumenta a fonte para ficar mais legível */
+        max-width: 95%;
+        /* ocupa quase toda a largura disponível */
+    }
 }
 
 @keyframes revelar {
