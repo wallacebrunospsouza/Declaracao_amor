@@ -1,126 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Minha Declaração de Amor</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to bottom, #ffdee9, #b5fffc);
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <title>Minha Declaração de Amor</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    .container {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ffdee9, #b5fffc);
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            overflow-x: hidden;
+        }
 
-    #botao-amor {
-      padding: 20px 40px;
-      font-size: 24px;
-      border: none;
-      border-radius: 12px;
-      background-color: #ff4f81;
-      color: white;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+        .container {
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    #botao-amor:hover {
-      background-color: #ff1e63;
-    }
+        #botao-amor {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 12px;
+            background-color: #ff4f81;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            max-width: 90%;
+        }
 
-    #declaracao {
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 30px;
-    }
+        #botao-amor:hover {
+            background-color: #ff1e63;
+        }
 
-    #foto-amada {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 0 20px #ff4f81;
-    }
+        #declaracao {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+        }
 
-    #texto-declaracao {
-      font-size: 20px;
-      max-width: 600px;
-      color: #333;
-      background: rgba(255, 255, 255, 0.7);
-      padding: 20px;
-      border-radius: 20px;
-    }
+        #foto-amada {
+            width: 60vw;
+            max-width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px #ff4f81;
+        }
 
-    .emoji {
-      position: fixed;
-      font-size: 32px;
-      animation: cair 4s linear infinite;
-      top: -50px;
-    }
+        #texto-declaracao {
+            font-size: 1.1rem;
+            max-width: 90%;
+            color: #333;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 20px;
+            font-family: 'Georgia', serif;
+            text-align: left;
+            white-space: pre-line;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
 
-    @keyframes cair {
-      0% { transform: translateY(0); opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
+        .emoji {
+            position: fixed;
+            font-size: 28px;
+            animation: cair 4s linear infinite;
+            top: -50px;
+            pointer-events: none;
+        }
 
-    audio {
-      display: none;
-    }
-  </style>
+        @keyframes cair {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        audio {
+            display: none;
+        }
+
+        /* 🌐 Responsividade para celular */
+        @media (max-width: 600px) {
+            #botao-amor {
+                font-size: 1rem;
+                padding: 12px 20px;
+            }
+
+            #texto-declaracao {
+                font-size: 1rem;
+                padding: 16px;
+            }
+
+            #foto-amada {
+                width: 70vw;
+            }
+
+            .emoji {
+                font-size: 24px;
+            }
+        }
+    </style>
+
 </head>
-<body>
-  <div class="container">
-    <button id="botao-amor">Clique para ver</button>
 
-    <div id="declaracao">
-      <img id="foto-amada" src="sua-imagem.jpg" alt="Foto da pessoa amada">
-      <p id="texto-declaracao">
-        <!-- Escreva sua declaração aqui -->
-        Você é a razão do meu sorriso todos os dias. Eu te amo mais do que palavras podem expressar. 💖
-      </p>
+<body>
+    <div class="container">
+        <button id="botao-amor">Clique para ver</button>
+
+        <div id="declaracao">
+            <img id="foto-amada" src="WhatsApp Image 2025-06-07 at 13.34.41 (1).jpeg" alt="Foto da pessoa amada">
+            <p id="texto-declaracao">
+                <!-- Escreva sua declaração aqui -->
+                Graciosa Infindade,
+                Rainha Absoluta do Meu Coração (e da minha senha do meu Discord, Instagram, Email e do que mais
+                mesmo??),
+
+                Hoje, 08/06/2025, completamos UM ANO de namoro! Isso mesmo: 365 dias desde que você, em um momento de
+                clarividência divina ou leve surto romântico e talvez alguma loucura (ainda não sei), aceitou namorar
+                comigo — o seu amado, fiel, e levemente submisso Lixo Reciclável. (Lembra desse apelido? :3)
+
+                E olha… que reciclagem bem feita, hein? Você pegou esse entulho emocional (completamente esquisito) aqui
+                e transformou em namorado (quase) decente. Milagre da natureza ou pura paciência feminina? Provavelmente
+                os dois.
+
+                Durante esse ano, aprendi muitas coisas:
+
+                Que "tô com saudades" nunca é só um aviso, é um alerta vermelho.
+
+                Que "tanto faz" não significa tanto faz.
+
+                E que, sim, dizer "sim, amor" resolve 90% dos conflitos. (Os outros 10% a gente com o carinho ou
+                transando).
+
+                Mas a verdade é que, no meio de todas as nossas piadas, apelidos malucos e seus comandos que eu sigo sem
+                hesitar (as vezes sem hesitar), eu encontrei o amor da minha vida. A minha graciosa infinitude de
+                sentimentos bons, a minha paz caótica, a minha Tayla.
+
+                Você é o melhor erro de cálculo do cupido. A coincidência mais certeira do destino. A rainha que manda,
+                e eu, seu súdito feliz :3
+
+                Obrigado por ser minha companheira, minha terapeuta não licenciada e não nega, você é sim, minha melhor
+                amiga, e minha chefe emocional. Eu amo ser seu namorado — e se for pra passar mais mil anos ouvindo você
+                me chamar de bb, momozi, nenem, que seja. Só não me joga fora, tá? TvT
+
+                Feliz 1 ano, meu amor. Que venham muitos mais — com você mandando, e eu obedecendo (com amor, claro).
+
+                Do seu eterno capacho apaixonado,
+                Lixo reciclavel, bb, momozi, nenem, moh, mozinho, amor, anjo, anjinho, anju, idiota, cara, mano, noivo,
+                futuro marido, futuro pai dos nossos filhos, Wallace.
+            </p>
+        </div>
+
+        <audio id="musica" src="sua-musica.mp3" loop autoplay></audio>
     </div>
 
-    <audio id="musica" src="sua-musica.mp3" loop autoplay></audio>
-  </div>
+    <script>
+        const botao = document.getElementById('botao-amor');
+        const declaracao = document.getElementById('declaracao');
+        const musica = document.getElementById('musica');
 
-  <script>
-    const botao = document.getElementById('botao-amor');
-    const declaracao = document.getElementById('declaracao');
-    const musica = document.getElementById('musica');
+        function criarEmojiChuva(emoji) {
+            const elemento = document.createElement('div');
+            elemento.classList.add('emoji');
+            elemento.textContent = emoji;
+            elemento.style.left = Math.random() * 100 + 'vw';
+            elemento.style.animationDuration = (Math.random() * 2 + 3) + 's';
+            document.body.appendChild(elemento);
 
-    function criarEmojiChuva(emoji) {
-      const elemento = document.createElement('div');
-      elemento.classList.add('emoji');
-      elemento.textContent = emoji;
-      elemento.style.left = Math.random() * 100 + 'vw';
-      elemento.style.animationDuration = (Math.random() * 2 + 3) + 's';
-      document.body.appendChild(elemento);
+            setTimeout(() => {
+                elemento.remove();
+            }, 5000);
+        }
 
-      setTimeout(() => {
-        elemento.remove();
-      }, 5000);
-    }
+        function iniciarChuvaDeEmojis(emoji) {
+            setInterval(() => criarEmojiChuva(emoji), 200);
+        }
 
-    function iniciarChuvaDeEmojis(emoji) {
-      setInterval(() => criarEmojiChuva(emoji), 200);
-    }
-
-    botao.addEventListener('click', () => {
-      botao.style.display = 'none';
-      declaracao.style.display = 'flex';
-      musica.play();
-      iniciarChuvaDeEmojis('❤️'); // Você pode trocar por 💋, 🥰, etc.
-    });
-  </script>
+        botao.addEventListener('click', () => {
+            botao.style.display = 'none';
+            declaracao.style.display = 'flex';
+            musica.play();
+            iniciarChuvaDeEmojis('❤️'); // Você pode trocar por 💋, 🥰, etc.
+        });
+    </script>
 </body>
+
 </html>
