@@ -145,7 +145,8 @@ audio {
     }
 
     #texto-declaracao {
-        font-size: 1.05rem;
+        font-size: 0.95rem;
+
         /* fonte um pouco menor */
         line-height: 2;
         padding: 24px 20px;
