@@ -2,22 +2,30 @@ const botao = document.getElementById('botao-amor');
 const declaracao = document.getElementById('declaracao');
 const musica = document.getElementById('musica');
 
-function criarEmojiChuva(emoji) {
+function criarEmojiChuva(emoji, isMobile) {
     const elemento = document.createElement('div');
     elemento.classList.add('emoji');
     elemento.textContent = emoji;
     elemento.style.left = Math.random() * 100 + 'vw';
-    elemento.style.animationDuration = (Math.random() * 2 + 3) + 's';
+
+    const duracao = isMobile ? (Math.random() * 3 + 5) : (Math.random() * 2 + 3);
+    elemento.style.animationDuration = duracao + 's';
+
     document.body.appendChild(elemento);
 
     setTimeout(() => {
         elemento.remove();
-    }, 5000);
+    }, duracao * 1000);
 }
 
+
 function iniciarChuvaDeEmojis(emoji) {
-    setInterval(() => criarEmojiChuva(emoji), 200);
+    const isMobile = window.innerWidth <= 768;
+    const intervalo = isMobile ? 600 : 200;
+
+    setInterval(() => criarEmojiChuva(emoji, isMobile), intervalo);
 }
+
 
 botao.addEventListener('click', () => {
     document.body.classList.add('fade-body'); // muda o fundo
