@@ -37,3 +37,7 @@
 .responsividade-absoluta a:hover {
     background: rgba(255, 255, 255, 0.3);
 }
+
+#heart {
+    font-size: 60px;
+}
