@@ -174,12 +174,12 @@ footer {
 
 /* Submenu estilo */
 .submenu-anos {
-  background-color: white;
-  border: 1px solid #ccc;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
   border-radius: 6px;
   margin-top: 8px;
   padding: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   opacity: 0;
   transform: scale(0.95);
   transform-origin: top right;
@@ -188,6 +188,7 @@ footer {
   position: absolute;
   right: 0;
 }
+
 
 /* Mostrar submenu */
 .submenu-anos.show {
@@ -208,11 +209,12 @@ footer {
 
 .submenu-anos a {
   text-decoration: none;
-  color: #8B0000;
+  color: #ccc;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
+
 .submenu-anos a:hover {
-  color: #a80000;
+  color: #ff4d4d;
 }
