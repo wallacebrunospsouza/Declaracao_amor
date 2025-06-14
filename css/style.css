@@ -21,6 +21,8 @@ header {
   text-align: center;
   color: #ff4d4d;
   box-shadow: 0 2px 10px rgba(255, 0, 0, 0.1);
+  position: relative;
+  padding-top: 60px;
 }
 
 header h1 {
@@ -108,49 +110,53 @@ footer {
   margin-top: 10px;
 }
 
-
-
-@media (max-width: 600px) {
-  main.pagina p {
-    font-size: 1rem;
-  }
-
-  .card-link {
-    font-size: 1rem;
-  }
-}
-
 .navegacao-datas {
   background-color: #111;
   padding: 10px 0;
   text-align: center;
 }
 
-.navegacao-datas ul {
+nav.navegacao-datas ul {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* Permite que os itens quebrem linha quando precisar */
+  gap: 12px;
+  /* Espaçamento entre os itens */
+  padding-left: 0;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+nav.navegacao-datas li {
   margin: 0;
-  padding: 0;
 }
 
-.navegacao-datas li {
-  display: inline-block;
-  margin: 0 15px;
-}
 
-.navegacao-datas a {
+nav.navegacao-datas a {
   color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 6px 12px;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  display: inline-block;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  white-space: nowrap;
+  /* impede quebra dentro do link */
 }
 
-.navegacao-datas a:hover {
-  color: red;
+
+nav.navegacao-datas a:hover,
+nav.navegacao-datas a:focus {
+  background-color: #ff4d4d;
+  color: #fff;
 }
 
 /* Submenu container no canto superior direito */
 .submenu-container {
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
   z-index: 1000;
@@ -217,4 +223,27 @@ footer {
 
 .submenu-anos a:hover {
   color: #ff4d4d;
+}
+
+.menu-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s;
+  white-space: nowrap;
+}
+
+.menu-links li a:hover {
+  background-color: #ff4d4d;
 }

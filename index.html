@@ -3,32 +3,63 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Para Tayla, com Amor</title>
-    <link rel="stylesheet" href="css/style.css" />
-
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/responsividade.css" />
 </head>
 
-<body class="home">
-
+<body>
     <header>
         <h1>Para Tayla, com Amor 💘</h1>
-        <p class="subtitulo">Escolha um momento especial:</p>
     </header>
 
-    <nav class="navegacao-datas">
-        <ul>
-            <li><a href="html/dia_namorados/namorados.html">Dia dos Namorados</a></li>
-            <li><a href="html/aniversario_namoro/aniversario-namoro.html">Aniversário de Namoro</a></li>
-            <li><a href="html/aniversario_dela/aniversario-dela.html">Aniversário da Tayla</a></li>
-        </ul>
-    </nav>
+    <!-- Overlay de menu para mobile -->
+    <div class="menu-overlay" id="menuOverlay">
+        <nav class="navegacao-datas" id="responsividade-absoluta" id="menuMobile">
+            <ul class="menu-links">
+                <li><a href="html/dia_namorados/namorados.html">Dia dos Namorados</a></li>
+                <li><a href="html/aniversario_namoro/aniversario-namoro.html">Aniversário de Namoro</a></li>
+                <li><a href="html/aniversario_dela/aniversario-dela.html">Aniversário da Tayla</a></li>
+            </ul>
+        </nav>
 
+    </div>
+
+    <div id="heart-container">
+        <div id="heart">❤️</div>
+    </div>
 
     <footer>
         <span>Com carinho, Wallace 🖤</span>
     </footer>
-<script src="../../js/submenu.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menu = document.getElementById("menuMobile");
+
+            // Ativa em telas pequenas
+            if (window.innerWidth <= 768) {
+                let menuShown = false;
+
+                document.addEventListener("click", () => {
+                    if (!menuShown) {
+                        menu.classList.add("show");
+                        menuShown = true;
+                    } else {
+                        menu.classList.remove("show");
+                        menuShown = false;
+                    }
+                });
+
+                // Evita que clique nos links feche imediatamente
+                menu.querySelectorAll("a").forEach(link => {
+                    link.addEventListener("click", e => e.stopPropagation());
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>

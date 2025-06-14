@@ -1,0 +1,39 @@
+ #orbit-container {
+     width: 220px;
+     height: 220px;
+     margin: 40px auto 60px;
+     /* centraliza horizontalmente com margem em cima e embaixo */
+     perspective: 600px;
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+
+ #orbit-system {
+     position: relative;
+     width: 100%;
+     height: 100%;
+     overflow: visible;
+ }
+
+ .heart {
+     position: absolute;
+     top: 0;
+     left: 0;
+
+     font-size: 4rem;
+     user-select: none;
+
+     cursor: default;
+     filter: drop-shadow(0 0 3px #ff7fae);
+     transition: filter 0.2s ease;
+ }
+
+ .centralizador {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }

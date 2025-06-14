@@ -1,0 +1,86 @@
+ html,
+ body {
+     margin: 0;
+     padding: 0;
+     height: 100%;
+     background-color: #0d0d0d;
+     color: white;
+     font-family: 'Georgia', serif;
+     overflow-x: hidden;
+ }
+
+ body {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     align-items: center;
+     min-height: 100vh;
+ }
+
+ header {
+     margin: 40px 0 20px;
+     text-align: center;
+ }
+
+ header h1 {
+     font-size: 2.5rem;
+     color: #ff4d4d;
+ }
+
+ nav.navegacao-datas ul {
+     list-style: none;
+     padding: 0;
+     margin: 0 0 40px 0;
+     display: flex;
+     gap: 30px;
+     justify-content: center;
+     flex-wrap: wrap;
+ }
+
+ nav.navegacao-datas a {
+     color: #ccc;
+     text-decoration: none;
+     font-weight: bold;
+     font-size: 1.1rem;
+     transition: color 0.3s;
+ }
+
+ nav.navegacao-datas a:hover {
+     color: #ff4d4d;
+ }
+
+ /* Centraliza o coração no centro da tela */
+ #heart-container {
+     flex: 1;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #heart {
+     font-size: 20rem;
+     color: #ff4d4d;
+     animation: pulse 2s ease-in-out infinite;
+     user-select: none;
+ }
+
+ @keyframes pulse {
+
+     0%,
+     100% {
+         transform: scale(1);
+         filter: drop-shadow(0 0 5px #ff4d4d);
+     }
+
+     50% {
+         transform: scale(1.15);
+         filter: drop-shadow(0 0 15px #ff4d4d);
+     }
+ }
+
+ footer {
+     text-align: center;
+     padding: 20px;
+     font-size: 1rem;
+     color: #999;
+ }

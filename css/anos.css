@@ -1,0 +1,64 @@
+/* Fonte e base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
+    background-color: #121212;
+    color: #eee;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ff4d4d;
+    box-shadow: 0 2px 6px rgba(255, 77, 77, 0.1);
+}
+
+header nav a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+header nav a:hover {
+    color: #ff4d4d;
+}
+
+/* Conteúdo central */
+.conteudo {
+    flex: 1;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Box da carta */
+.carta-box {
+    background-color: #181818;
+    border-left: 6px solid #ff4d4d;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255, 77, 77, 0.08);
+    line-height: 1.9;
+    font-size: 1.15rem;
+    letter-spacing: 0.4px;
+    transition: 0.3s;
+}
+
+.carta-box p {
+    margin-bottom: 24px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a1a1a;
+    color: #888;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.95rem;
+}
