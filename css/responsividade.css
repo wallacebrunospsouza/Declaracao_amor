@@ -1,45 +1,78 @@
-/* RESPONSIVIDADE ABSOLUTA PARA MOBILE */
+/* =================== RESPONSIVIDADE ABSOLUTA PARA MOBILE =================== */
+/* Aplica estilos para telas com largura máxima de 600px */
 @media (max-width: 600px) {
+
+    /* Container que aparece como overlay para menus responsivos */
     .responsividade-absoluta {
         display: none;
+        /* Oculto por padrão */
         position: fixed;
+        /* Fixa sobre toda a tela */
         inset: 0;
+        /* Preenche toda a viewport (top/right/bottom/left = 0) */
         z-index: 999;
+        /* Fica acima de quase todos os elementos */
         backdrop-filter: blur(10px);
+        /* Fundo desfocado (suporte para browsers) */
         -webkit-backdrop-filter: blur(10px);
+        /* Prefixo para Safari */
         background: rgba(0, 0, 0, 0.3);
+        /* Fundo semitransparente escuro */
         justify-content: center;
+        /* Centraliza conteúdo horizontalmente */
         align-items: center;
+        /* Centraliza conteúdo verticalmente */
         flex-direction: column;
+        /* Itens alinhados em coluna */
         padding: 30px;
+        /* Espaçamento interno */
         border-radius: 16px;
+        /* Bordas arredondadas */
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        /* Sombra ao redor */
     }
 
+    /* Classe para mostrar o overlay quando ativa */
     .responsividade-absoluta.show {
         display: flex;
+        /* Exibe o container como flex */
     }
 
+    /* Estilos para os itens da lista dentro do menu */
     .responsividade-absoluta li {
         list-style: none;
+        /* Remove marcadores padrão da lista */
         margin: 10px 0;
+        /* Espaçamento vertical entre itens */
     }
 
+    /* Estilização dos links dentro do menu responsivo */
     .responsividade-absoluta a {
         color: #a80606;
+        /* Cor do texto vermelha */
         font-size: 20px;
+        /* Texto maior para toque fácil */
         padding: 12px 20px;
+        /* Espaçamento interno do link */
         border-radius: 10px;
+        /* Bordas arredondadas nos links */
         text-decoration: none;
+        /* Remove sublinhado padrão */
         background: rgba(255, 255, 255, 0.15);
+        /* Fundo translúcido */
         transition: background 0.3s ease;
+        /* Animação suave para hover */
     }
 
+    /* Efeito visual ao passar o mouse sobre os links */
     .responsividade-absoluta a:hover {
         background: rgba(255, 255, 255, 0.3);
+        /* Fundo mais claro */
     }
 
+    /* Ajuste do tamanho do coração no celular */
     #heart {
         font-size: 80px;
+        /* Diminui o tamanho da fonte do coração */
     }
 }

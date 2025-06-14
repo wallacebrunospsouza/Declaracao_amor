@@ -1,3 +1,6 @@
+Claro! Aqui está seu HTML organizado e comentado para facilitar a leitura e manutenção:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -5,20 +8,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Aniversário de Namoro</title>
+
+  <!-- Estilos gerais do site -->
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/main_2.css" />
-  <link rel="stylesheet" href="css/responsividade.css" />
 
+  <!-- Estilos para responsividade -->
+  <link rel="stylesheet" href="css/responsividade.css" />
+</head>
 
 <body>
+  <!-- Cabeçalho com título da página e link para voltar -->
   <header>
     <h1>Nosso Aniversário 🎉</h1>
-    <nav><a href="../../index.html">← Voltar</a></nav>
+    <nav>
+      <a href="../../index.html">← Voltar</a>
+    </nav>
   </header>
 
+  <!-- Container do submenu: botão para exibir/esconder os anos -->
   <div class="submenu-container">
-    <button id="toggleSubmenu">📅 Anos</button>
-    <nav class="submenu-anos hidden">
+    <button id="toggleSubmenu" aria-expanded="false" aria-controls="submenuAnos">📅 Anos</button>
+
+    <!-- Menu de anos, inicialmente escondido -->
+    <nav class="submenu-anos hidden" id="submenuAnos" aria-hidden="true">
       <ul>
         <li><a href="an_2025.html">2025</a></li>
         <!-- Adicione mais anos aqui -->
@@ -26,13 +39,14 @@
     </nav>
   </div>
 
+  <!-- Conteúdo principal com instrução ao usuário -->
   <main class="pagina">
     <p>
-      clique em anos para ver seu textinho especial!<br>
+      clique em anos para ver seu textinho especial!<br />
     </p>
   </main>
 
-
+  <!-- Área central com animação dos corações orbitando -->
   <main class="centralizador">
     <div id="orbit-container" aria-label="Dois corações orbitando um ao outro">
       <div id="orbit-system">
@@ -42,12 +56,17 @@
     </div>
   </main>
 
+  <!-- Rodapé com mensagem carinhosa -->
   <footer>
     <span>Com você, cada dia é único. ❤️</span>
   </footer>
+
+  <!-- Scripts para funcionalidade do submenu e animação dos corações -->
   <script src="../../js/submenu.js"></script>
   <script src="../../js/orbita_coracao.js"></script>
-
 </body>
 
 </html>
+```
+
+Se quiser, posso ajudar a melhorar o script do submenu para acessibilidade e toggle de exibição, só avisar!

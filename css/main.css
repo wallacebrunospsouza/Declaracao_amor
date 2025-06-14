@@ -1,86 +1,113 @@
- html,
- body {
-     margin: 0;
-     padding: 0;
-     height: 100%;
-     background-color: #0d0d0d;
-     color: white;
-     font-family: 'Georgia', serif;
-     overflow-x: hidden;
- }
+/* =================== RESET E CONFIGURAÇÕES GERAIS =================== */
+/* Remove margens e paddings padrão, define altura total e fundo escuro */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #0d0d0d;
+    color: white;
+    font-family: 'Georgia', serif;
+    overflow-x: hidden;
+    /* Evita barra de rolagem horizontal */
+}
 
- body {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-between;
-     align-items: center;
-     min-height: 100vh;
- }
+/* =================== BODY =================== */
+/* Usa flexbox para alinhar conteúdo em coluna, espaçando entre topo e rodapé */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    /* Garante que ocupe a altura total da tela */
+}
 
- header {
-     margin: 40px 0 20px;
-     text-align: center;
- }
+/* =================== HEADER =================== */
+/* Espaçamento e centralização do cabeçalho */
+header {
+    margin: 40px 0 20px;
+    text-align: center;
+}
 
- header h1 {
-     font-size: 2.5rem;
-     color: #ff4d4d;
- }
+/* Estilo do título principal */
+header h1 {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    /* Vermelho vibrante */
+}
 
- nav.navegacao-datas ul {
-     list-style: none;
-     padding: 0;
-     margin: 0 0 40px 0;
-     display: flex;
-     gap: 30px;
-     justify-content: center;
-     flex-wrap: wrap;
- }
+/* =================== NAVEGAÇÃO DE DATAS =================== */
+/* Lista horizontal sem marcadores, espaçamento entre links */
+nav.navegacao-datas ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite quebra de linha se necessário */
+}
 
- nav.navegacao-datas a {
-     color: #ccc;
-     text-decoration: none;
-     font-weight: bold;
-     font-size: 1.1rem;
-     transition: color 0.3s;
- }
+/* Estilo dos links na navegação */
+nav.navegacao-datas a {
+    color: #ccc;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
 
- nav.navegacao-datas a:hover {
-     color: #ff4d4d;
- }
+/* Efeito hover para links da navegação */
+nav.navegacao-datas a:hover {
+    color: #ff4d4d;
+}
 
- /* Centraliza o coração no centro da tela */
- #heart-container {
-     flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+/* =================== CONTAINER DO CORAÇÃO =================== */
+/* Centraliza o coração no espaço disponível, ocupando o máximo possível */
+#heart-container {
+    flex: 1;
+    /* Ocupa o espaço restante entre header e footer */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
- #heart {
-     font-size: 20rem;
-     color: #ff4d4d;
-     animation: pulse 2s ease-in-out infinite;
-     user-select: none;
- }
+/* =================== CORAÇÃO PULSANTE =================== */
+/* Estilização do coração grande */
+#heart {
+    font-size: 20rem;
+    /* Tamanho muito grande */
+    color: #ff4d4d;
+    animation: pulse 2s ease-in-out infinite;
+    /* Animação de pulso contínuo */
+    user-select: none;
+    /* Evita seleção do texto/emoji */
+}
 
- @keyframes pulse {
+/* =================== ANIMAÇÃO DO PULSO =================== */
+@keyframes pulse {
 
-     0%,
-     100% {
-         transform: scale(1);
-         filter: drop-shadow(0 0 5px #ff4d4d);
-     }
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px #ff4d4d);
+    }
 
-     50% {
-         transform: scale(1.15);
-         filter: drop-shadow(0 0 15px #ff4d4d);
-     }
- }
+    50% {
+        transform: scale(1.15);
+        /* Cresce um pouco */
+        filter: drop-shadow(0 0 15px #ff4d4d);
+        /* Sombra mais intensa */
+    }
+}
 
- footer {
-     text-align: center;
-     padding: 20px;
-     font-size: 1rem;
-     color: #999;
- }
+/* =================== FOOTER =================== */
+/* Centraliza texto e define cor mais clara */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    color: #999;
+}

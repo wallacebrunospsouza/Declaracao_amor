@@ -1,3 +1,6 @@
+Claro! Aqui está seu código organizado e com comentários explicativos para facilitar o entendimento:
+
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -6,36 +9,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aniversário de Namoro</title>
 
-    <!-- Google Font -->
+    <!-- Fonte Google para estilização das letras -->
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Quicksand:wght@400;600&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 
-    <!-- CSS dedicado para cartas -->
+    <!-- CSS para estilização das cartas -->
     <link rel="stylesheet" href="../../css/anos.css" />
+    <!-- CSS geral do site -->
     <link rel="stylesheet" href="../../css/style.css" />
+    <!-- CSS para responsividade -->
     <link rel="stylesheet" href="css/responsividade.css" />
 </head>
 
 <body>
+    <!-- Cabeçalho com título e link para voltar à página principal -->
     <header>
         <h1>2025</h1>
-        <nav><a href="../../index.html">← Voltar</a></nav>
+        <nav>
+            <a href="../../index.html">← Voltar</a>
+        </nav>
     </header>
 
+    <!-- Container do submenu para seleção de anos -->
     <div class="submenu-container">
-        <button id="toggleSubmenu">📅 Anos</button>
-        <nav class="submenu-anos hidden">
+        <!-- Botão para mostrar/esconder o submenu -->
+        <button id="toggleSubmenu" aria-expanded="false" aria-controls="submenuAnos">📅 Anos</button>
+
+        <!-- Menu de anos inicialmente oculto -->
+        <nav class="submenu-anos hidden" id="submenuAnos" aria-hidden="true">
             <ul>
                 <li><a href="an_2025.html">2025</a></li>
-                <!-- Adicione mais anos aqui -->
+                <!-- Outros anos podem ser adicionados aqui -->
             </ul>
         </nav>
     </div>
 
+    <!-- Conteúdo principal com a carta de texto -->
     <main class="conteudo">
         <section class="carta-box">
-            <p>Graciosa Infindade,<br>Rainha Absoluta do Meu Coração (e da minha senha do meu Discord, Instagram, Email
-                e do que mais mesmo??),</p>
+            <p>Graciosa Infindade,<br />Rainha Absoluta do Meu Coração (e da minha senha do meu Discord, Instagram,
+                Email e do que mais mesmo??),</p>
 
             <p>Hoje, 08/06/2025, completamos UM ANO de namoro! Isso mesmo: 365 dias desde que você, em um momento de
                 clarividência divina ou leve surto romântico e talvez alguma loucura (ainda não sei), aceitou namorar
@@ -46,12 +59,13 @@
 
             <p>Durante esse ano, aprendi muitas coisas:</p>
 
-            <p>Que "tô com saudades" nunca é só um aviso, é um alerta vermelho.<br>
-                Que "tanto faz" não significa tanto faz.<br>
+            <p>
+                Que "tô com saudades" nunca é só um aviso, é um alerta vermelho.<br />
+                Que "tanto faz" não significa tanto faz.<br />
                 E que, sim, dizer "sim, amor" resolve 90% dos conflitos. (Os outros 10% a gente resolve com o carinho).
             </p>
 
-            <p>No meio de todas as nossas piadas, apelidos malucos e seus comandos que eu sigo sem hesitar (as vezes sem
+            <p>No meio de todas as nossas piadas, apelidos malucos e seus comandos que eu sigo sem hesitar (às vezes sem
                 hesitar), eu encontrei o amor da minha vida. A minha paz caótica. A minha Tayla.</p>
 
             <p>Você é o melhor erro de cálculo do cupido. A coincidência mais certeira do destino. A rainha que manda, e
@@ -62,16 +76,21 @@
 
             <p>Feliz 1 ano, meu amor. Que venham muitos mais — com você mandando, e eu obedecendo (com amor, claro).</p>
 
-            <p>Do seu eterno capacho apaixonado,<br>
+            <p>
+                Do seu eterno capacho apaixonado,<br />
                 Lixo reciclável, bb, momozi, nenem, moh, mozinho, amor, anjo, anjinho, anju, idiota, cara, mano, noivo,
                 futuro marido, futuro pai dos nossos filhos, Wallace.
             </p>
         </section>
     </main>
 
+    <!-- Rodapé com mensagem carinhosa -->
     <footer>
         <span>Com você, cada dia é único. ❤️</span>
     </footer>
 </body>
 
 </html>
+```
+
+Se quiser, posso ajudar a criar o script para ativar o submenu e melhorar a usabilidade! Quer?

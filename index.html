@@ -5,43 +5,61 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Para Tayla, com Amor</title>
+    <!-- Links para os arquivos de estilo principais -->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/responsividade.css" />
 </head>
 
 <body>
+    <!-- Cabeçalho da página com título principal -->
     <header>
         <h1>Para Tayla, com Amor 💘</h1>
     </header>
 
-    <!-- Overlay de menu para mobile -->
+    <!-- 
+        Overlay que contém o menu para dispositivos móveis.
+        Inicialmente oculto, aparece com efeito de desfoque no fundo quando ativado.
+    -->
     <div class="menu-overlay" id="menuOverlay">
-        <nav class="navegacao-datas" id="responsividade-absoluta" id="menuMobile">
+        <!-- 
+            Navegação principal dentro do overlay,
+            com links para as páginas especiais.
+            Usa classe para responsividade e id para controle via JavaScript.
+        -->
+        <nav class="navegacao-datas responsividade-absoluta" id="menuMobile">
             <ul class="menu-links">
                 <li><a href="html/dia_namorados/namorados.html">Dia dos Namorados</a></li>
                 <li><a href="html/aniversario_namoro/aniversario-namoro.html">Aniversário de Namoro</a></li>
                 <li><a href="html/aniversario_dela/aniversario-dela.html">Aniversário da Tayla</a></li>
             </ul>
         </nav>
-
     </div>
 
+    <!-- Container que contém o coração pulsante -->
     <div id="heart-container">
         <div id="heart">❤️</div>
     </div>
 
+    <!-- Rodapé com mensagem carinhosa -->
     <footer>
         <span>Com carinho, Wallace 🖤</span>
     </footer>
 
+    <!-- 
+        Script JavaScript para controlar a exibição do menu mobile:
+        - Só ativa em telas até 768px de largura (tipicamente dispositivos móveis).
+        - Alterna a classe "show" para mostrar/ocultar o menu.
+        - Impede que cliques nos links dentro do menu fechem o menu imediatamente.
+    -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const menu = document.getElementById("menuMobile");
 
-            // Ativa em telas pequenas
+            // Ativa em telas pequenas (mobile/tablet)
             if (window.innerWidth <= 768) {
                 let menuShown = false;
 
+                // Clique em qualquer lugar da tela alterna o menu
                 document.addEventListener("click", () => {
                     if (!menuShown) {
                         menu.classList.add("show");
@@ -52,7 +70,7 @@
                     }
                 });
 
-                // Evita que clique nos links feche imediatamente
+                // Evita que clique nos links feche o menu imediatamente
                 menu.querySelectorAll("a").forEach(link => {
                     link.addEventListener("click", e => e.stopPropagation());
                 });

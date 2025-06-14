@@ -1,10 +1,11 @@
-/* RESET */
+/* RESET: Remove margens e paddings padrão e usa border-box para facilitar o controle das dimensões */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos básicos do corpo */
 body {
   font-family: 'Georgia', serif;
   background: #0d0d0d;
@@ -14,7 +15,8 @@ body {
   flex-direction: column;
 }
 
-/* HEADER */
+/* =================== HEADER =================== */
+/* Estilização do cabeçalho */
 header {
   background-color: #1a1a1a;
   padding: 20px;
@@ -29,6 +31,7 @@ header h1 {
   font-size: 1.8rem;
 }
 
+/* Estilo da navegação dentro do header */
 header nav {
   margin-top: 10px;
 }
@@ -43,7 +46,8 @@ header nav a:hover {
   color: #ff4d4d;
 }
 
-/* MENU INICIAL */
+/* =================== MENU INICIAL =================== */
+/* Container central do menu principal */
 .menu-central {
   display: flex;
   flex-direction: column;
@@ -52,6 +56,7 @@ header nav a:hover {
   padding: 40px;
 }
 
+/* Estilo dos links do menu (cards) */
 .card-link {
   background-color: #1a1a1a;
   color: white;
@@ -71,7 +76,8 @@ header nav a:hover {
   color: black;
 }
 
-/* PÁGINAS */
+/* =================== PÁGINAS =================== */
+/* Conteúdo principal das páginas */
 main.pagina {
   flex: 1;
   padding: 40px 20px;
@@ -85,6 +91,7 @@ main.pagina p {
   line-height: 2;
 }
 
+/* Estilo para imagens/fotos circulares */
 .foto {
   width: 150px;
   height: 150px;
@@ -95,7 +102,8 @@ main.pagina p {
   box-shadow: 0 0 12px #ff4d4d66;
 }
 
-/* FOOTER */
+/* =================== FOOTER =================== */
+/* Estilização do rodapé */
 footer {
   background-color: #1a1a1a;
   padding: 15px;
@@ -104,26 +112,30 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Subtítulos usados nas páginas */
 .subtitulo {
   color: #eee;
   font-size: 1.1rem;
   margin-top: 10px;
 }
 
+/* =================== NAVEGAÇÃO DE DATAS =================== */
+/* Navegação para selecionar datas especiais */
 .navegacao-datas {
   background-color: #111;
   padding: 10px 0;
   text-align: center;
 }
 
+/* Lista horizontal de links da navegação */
 nav.navegacao-datas ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* Permite que os itens quebrem linha quando precisar */
+  /* Permite quebra de linha se necessário */
   gap: 12px;
-  /* Espaçamento entre os itens */
+  /* Espaçamento entre itens */
   padding-left: 0;
   margin: 0 auto;
   max-width: 100%;
@@ -133,7 +145,7 @@ nav.navegacao-datas li {
   margin: 0;
 }
 
-
+/* Links das datas */
 nav.navegacao-datas a {
   color: #fff;
   font-weight: 600;
@@ -144,9 +156,8 @@ nav.navegacao-datas a {
   border-radius: 6px;
   transition: background-color 0.3s ease, color 0.3s ease;
   white-space: nowrap;
-  /* impede quebra dentro do link */
+  /* Impede quebra dentro do link */
 }
-
 
 nav.navegacao-datas a:hover,
 nav.navegacao-datas a:focus {
@@ -154,7 +165,8 @@ nav.navegacao-datas a:focus {
   color: #fff;
 }
 
-/* Submenu container no canto superior direito */
+/* =================== SUBMENU =================== */
+/* Container do submenu posicionado no canto superior direito */
 .submenu-container {
   position: absolute;
   top: 20px;
@@ -163,6 +175,7 @@ nav.navegacao-datas a:focus {
   font-family: Arial, sans-serif;
 }
 
+/* Botão do submenu */
 .submenu-container button {
   background-color: #8B0000;
   color: white;
@@ -178,7 +191,7 @@ nav.navegacao-datas a:focus {
   background-color: #a80000;
 }
 
-/* Submenu estilo */
+/* Estilo do submenu */
 .submenu-anos {
   background-color: #1a1a1a;
   border: 1px solid #333;
@@ -195,24 +208,26 @@ nav.navegacao-datas a:focus {
   right: 0;
 }
 
-
-/* Mostrar submenu */
+/* Exibe o submenu */
 .submenu-anos.show {
   opacity: 1;
   transform: scale(1);
   pointer-events: auto;
 }
 
+/* Lista do submenu */
 .submenu-anos ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+/* Itens da lista do submenu */
 .submenu-anos li {
   margin: 6px 0;
 }
 
+/* Links do submenu */
 .submenu-anos a {
   text-decoration: none;
   color: #ccc;
@@ -220,11 +235,12 @@ nav.navegacao-datas a:focus {
   transition: color 0.2s ease;
 }
 
-
 .submenu-anos a:hover {
   color: #ff4d4d;
 }
 
+/* =================== MENU LINKS =================== */
+/* Lista de links do menu principal */
 .menu-links {
   list-style: none;
   display: flex;
@@ -234,6 +250,7 @@ nav.navegacao-datas a:focus {
   margin: 0;
 }
 
+/* Links dos itens do menu */
 .menu-links li a {
   color: #fff;
   text-decoration: none;

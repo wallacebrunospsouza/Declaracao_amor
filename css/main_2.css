@@ -1,39 +1,56 @@
- #orbit-container {
-     width: 220px;
-     height: 220px;
-     margin: 40px auto 60px;
-     /* centraliza horizontalmente com margem em cima e embaixo */
-     perspective: 600px;
-     position: relative;
-     display: flex;
-     align-items: center;
-     justify-content: center;
- }
+/* =================== CONTAINER DO SISTEMA DE ÓRBITA =================== */
+/* Define tamanho fixo, centraliza horizontalmente com margens e aplica perspectiva 3D */
+#orbit-container {
+    width: 220px;
+    height: 220px;
+    margin: 40px auto 60px;
+    /* 40px cima, automático lateral (centraliza), 60px baixo */
+    perspective: 600px;
+    /* Dá efeito de profundidade 3D aos filhos */
+    position: relative;
+    /* Para posicionamento absoluto interno */
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente */
+    justify-content: center;
+    /* Centraliza horizontalmente */
+}
 
+/* =================== SISTEMA DE ORBITA =================== */
+/* Container interno que ocupa todo espaço do pai e permite overflow visível */
+#orbit-system {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    /* Permite elementos "sair" do container */
+}
 
- #orbit-system {
-     position: relative;
-     width: 100%;
-     height: 100%;
-     overflow: visible;
- }
+/* =================== CORAÇÕES =================== */
+/* Estilo dos corações orbitantes */
+.heart {
+    position: absolute;
+    /* Posicionados relativamente ao #orbit-system */
+    top: 0;
+    left: 0;
+    font-size: 4rem;
+    /* Tamanho grande */
+    user-select: none;
+    /* Evita seleção do emoji/texto */
+    cursor: default;
+    /* Cursor padrão (não clicável) */
+    filter: drop-shadow(0 0 3px #ff7fae);
+    /* Sombra colorida */
+    transition: filter 0.2s ease;
+    /* Suaviza mudança de sombra */
+}
 
- .heart {
-     position: absolute;
-     top: 0;
-     left: 0;
-
-     font-size: 4rem;
-     user-select: none;
-
-     cursor: default;
-     filter: drop-shadow(0 0 3px #ff7fae);
-     transition: filter 0.2s ease;
- }
-
- .centralizador {
-     flex: 1;
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
+/* =================== CENTRALIZADOR GERAL =================== */
+/* Container flexível que centraliza conteúdo no eixo vertical e horizontal */
+.centralizador {
+    flex: 1;
+    /* Ocupa o espaço disponível */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

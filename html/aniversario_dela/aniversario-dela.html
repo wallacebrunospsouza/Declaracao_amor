@@ -5,38 +5,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Feliz Aniversário</title>
+
+  <!-- Estilos gerais do site -->
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/main_2.css" />
+
+  <!-- Estilos para responsividade -->
   <link rel="stylesheet" href="css/responsividade.css" />
-
-
 </head>
 
 <body>
+  <!-- Cabeçalho com título e link para voltar à página inicial -->
   <header>
     <h1>O Dia Mais Lindo do Ano 🎂</h1>
-    <nav><a href="../../index.html">← Voltar</a></nav>
+    <nav>
+      <a href="../../index.html">← Voltar</a>
+    </nav>
   </header>
 
+  <!-- Container do submenu com botão para exibir/esconder -->
   <div class="submenu-container">
-    <button id="toggleSubmenu">📅 Anos</button>
-    <nav class="submenu-anos hidden">
+    <button id="toggleSubmenu" aria-expanded="false" aria-controls="submenuAnos">📅 Anos</button>
+
+    <!-- Menu de anos, inicialmente oculto -->
+    <nav class="submenu-anos hidden" id="submenuAnos" aria-hidden="true">
       <ul>
         <!-- Adicione mais anos aqui -->
       </ul>
     </nav>
   </div>
 
-
-
-
+  <!-- Conteúdo principal da página -->
   <main class="pagina">
     <p>
-      opa opa!!<br>
-      Você não deveria estar aqui ainda 🤨<br>
+      opa opa!!<br />
+      Você não deveria estar aqui ainda 🤨<br />
     </p>
   </main>
 
+  <!-- Área central com animação dos corações orbitando -->
   <main class="centralizador">
     <div id="orbit-container" aria-label="Dois corações orbitando um ao outro">
       <div id="orbit-system">
@@ -46,12 +53,14 @@
     </div>
   </main>
 
+  <!-- Rodapé com mensagem carinhosa -->
   <footer>
     <span>Parabéns, minha bb. 🌹</span>
   </footer>
+
+  <!-- Scripts para funcionalidade do submenu e animação dos corações -->
   <script src="../../js/submenu.js"></script>
   <script src="../../js/orbita_coracao.js"></script>
-
 </body>
 
 </html>

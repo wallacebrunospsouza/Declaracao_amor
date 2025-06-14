@@ -1,4 +1,6 @@
-/* Fonte e base */
+/* =================== FONTE E BASE DA PÁGINA =================== */
+/* Remove margens e paddings padrão, define fonte, cor de fundo e texto, 
+   altura mínima e layout flexível em coluna */
 body {
     margin: 0;
     padding: 0;
@@ -10,7 +12,8 @@ body {
     flex-direction: column;
 }
 
-/* Header */
+/* =================== CABEÇALHO =================== */
+/* Centraliza texto, adiciona padding e cor de fundo com sombra sutil */
 header {
     text-align: center;
     padding: 20px;
@@ -19,25 +22,33 @@ header {
     box-shadow: 0 2px 6px rgba(255, 77, 77, 0.1);
 }
 
+/* Estilo para links dentro do nav do header */
 header nav a {
     color: #ccc;
     text-decoration: none;
     font-size: 0.95rem;
 }
 
+/* Cor dos links no hover */
 header nav a:hover {
     color: #ff4d4d;
 }
 
-/* Conteúdo central */
+/* =================== CONTEÚDO CENTRAL =================== */
+/* Define área principal com largura máxima, margin para centralizar e espaçamento interno */
 .conteudo {
     flex: 1;
+    /* Faz ocupar o espaço restante */
     max-width: 900px;
     margin: 80px auto;
+    /* Margem superior/inferior e centralização horizontal */
     padding: 0 20px;
+    /* Espaço lateral */
 }
 
-/* Box da carta */
+/* =================== BOX DA CARTA =================== */
+/* Fundo escuro, borda vermelha lateral, padding e cantos arredondados, sombra sutil,
+   espaçamento de texto e transição suave */
 .carta-box {
     background-color: #181818;
     border-left: 6px solid #ff4d4d;
@@ -50,11 +61,13 @@ header nav a:hover {
     transition: 0.3s;
 }
 
+/* Espaçamento inferior entre parágrafos dentro da carta */
 .carta-box p {
     margin-bottom: 24px;
 }
 
-/* Rodapé */
+/* =================== RODAPÉ =================== */
+/* Fundo escuro, cor cinza para texto, centralizado, padding e fonte menor */
 footer {
     background-color: #1a1a1a;
     color: #888;
