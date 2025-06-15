@@ -3,47 +3,39 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Feliz Aniversário</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Feliz aniversário</title>
 
-  <!-- Estilos gerais do site -->
+  <!-- Estilos base do site -->
   <link rel="stylesheet" href="../../css/style.css" />
   <link rel="stylesheet" href="../../css/main_2.css" />
 
-  <!-- Estilos para responsividade -->
+  <!-- Estilos específicos para responsividade -->
   <link rel="stylesheet" href="css/responsividade.css" />
 </head>
 
 <body>
-  <!-- Cabeçalho com título e link para voltar à página inicial -->
+  <!-- Cabeçalho com título e link de navegação para voltar -->
   <header>
-    <h1>O Dia Mais Lindo do Ano 🎂</h1>
+    <h1>Feliz aniversário 🎂</h1>
     <nav>
       <a href="../../index.html">← Voltar</a>
     </nav>
   </header>
 
-  <!-- Container do submenu com botão para exibir/esconder -->
-  <div class="submenu-container">
-    <button id="toggleSubmenu" aria-expanded="false" aria-controls="submenuAnos">📅 Anos</button>
-
-    <!-- Menu de anos, inicialmente oculto -->
-    <nav class="submenu-anos hidden" id="submenuAnos" aria-hidden="true">
-      <ul>
-        <!-- Adicione mais anos aqui -->
-      </ul>
-    </nav>
+  <!-- Overlay com menu centralizado, escondido inicialmente -->
+  <div id="overlayAnos" class="overlay fade-hidden" aria-hidden="true">
+    <div class="menu-central">
+      <nav>
+        <ul>
+          <li style="list-style-type: none;"><a href="ad_2025.html">2025</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 
-  <!-- Conteúdo principal da página -->
-  <main class="pagina">
-    <p>
-      opa opa!!<br />
-      Você não deveria estar aqui ainda 🤨<br />
-    </p>
-  </main>
 
-  <!-- Área central com animação dos corações orbitando -->
+  <!-- Área central com animação de corações orbitando -->
   <main class="centralizador">
     <div id="orbit-container" aria-label="Dois corações orbitando um ao outro">
       <div id="orbit-system">
@@ -53,14 +45,18 @@
     </div>
   </main>
 
-  <!-- Rodapé com mensagem carinhosa -->
+  <!-- Rodapé com mensagem final -->
   <footer>
-    <span>Parabéns, minha bb. 🌹</span>
+    <span>eu te amo infinitamente. 💌</span>
   </footer>
 
   <!-- Scripts para funcionalidade do submenu e animação dos corações -->
   <script src="../../js/submenu.js"></script>
   <script src="../../js/orbita_coracao.js"></script>
+  <script src="../../js/menu_fade.js"></script>
+
+
+
 </body>
 
 </html>

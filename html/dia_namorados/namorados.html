@@ -23,24 +23,17 @@
     </nav>
   </header>
 
-  <!-- Container do submenu com botão para mostrar/ocultar os anos -->
-  <div class="submenu-container">
-    <button id="toggleSubmenu" aria-expanded="false" aria-controls="submenuAnos">📅 Anos</button>
-
-    <!-- Menu com os anos (inicialmente escondido) -->
-    <nav class="submenu-anos hidden" id="submenuAnos" aria-hidden="true">
-      <ul>
-        <li><a href="dn_2025.html">2025</a></li>
-      </ul>
-    </nav>
+  <!-- Overlay com menu centralizado, escondido inicialmente -->
+  <div id="overlayAnos" class="overlay fade-hidden" aria-hidden="true">
+    <div class="menu-central">
+      <nav>
+        <ul>
+          <li style="list-style-type: none;"><a href="dn_2025.html">2025</a></li>
+        </ul>
+      </nav>
+    </div>
   </div>
 
-  <!-- Conteúdo principal da página com instrução para usuário -->
-  <main class="pagina">
-    <p>
-      clique em anos para ver seu textinho especial!<br>
-    </p>
-  </main>
 
   <!-- Área central com animação de corações orbitando -->
   <main class="centralizador">
@@ -60,6 +53,10 @@
   <!-- Scripts para funcionalidade do submenu e animação dos corações -->
   <script src="../../js/submenu.js"></script>
   <script src="../../js/orbita_coracao.js"></script>
+  <script src="../../js/menu_fade.js"></script>
+
+
+
 </body>
 
 </html>

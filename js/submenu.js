@@ -12,3 +12,10 @@ document.addEventListener("click", (e) => {
         submenu.classList.remove("show");
     }
 });
+
+
+
+
+
+
+
