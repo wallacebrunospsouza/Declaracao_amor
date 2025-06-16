@@ -1,6 +1,6 @@
 <h1 align="center">💌 Site Interativo de Declaração de Amor</h1>
 <p align="center">
-  Projeto pessoal que alia criatividade, sentimento e habilidades avançadas em front-end.
+  Projeto pessoal que alinha criatividade, sentimento e habilidades avançadas em front-end.
 </p>
 
 ---
