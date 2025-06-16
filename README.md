@@ -7,7 +7,7 @@
 
 ## 🧠 Sobre o Projeto
 
-Este projeto foi idealizado para oferecer uma **experiência digital interativa e responsiva** que permite expressar emoções de forma única e personalizada. Mais do que uma simples página estática, o site demonstra como a tecnologia pode aproximar pessoas, unindo inovação e afeto com originalidade.
+Este projeto foi idealizado para oferecer uma **experiência digital interativa e responsiva** para minha namorada, para permitir que eu expresse emoções de forma única e personalizada. Mais do que uma simples página estática, o site demonstra como a tecnologia pode aproximar pessoas, unindo inovação e afeto com originalidade.
 
 ---
 
