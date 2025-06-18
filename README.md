@@ -37,9 +37,7 @@ Este projeto foi idealizado para oferecer uma **experiência digital interativa 
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **MIT License**, permitindo o uso, modificação e distribuição livre, desde que os devidos créditos ao autor original sejam mantidos.
-
-Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE) (em inglês).
+Este repositório é distribuído sob a [Licença MIT](LICENSE). Sinta-se livre para explorar, adaptar e reutilizar o conteúdo com os devidos créditos.
 
 ## 👤 Autor
 
