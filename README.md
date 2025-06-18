@@ -40,3 +40,13 @@ Este projeto foi idealizado para oferecer uma **experiência digital interativa 
 Este projeto está licenciado sob a **MIT License**, permitindo o uso, modificação e distribuição livre, desde que os devidos créditos ao autor original sejam mantidos.
 
 Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE) (em inglês).
+
+## 👤 Autor
+
+Desenvolvido com dedicação por **Wallace Bruno S. P. Souza**  
+📧 Entre em contato: [wallacebrunospsouza82@gmail.com](https://mail.google.com/mail/?view=cm&to=wallacebrunospsouza82@gmail.com)  
+🔗 GitHub: [@wallacebrunospsouza](https://github.com/wallacebrunospsouza)  
+💼 LinkedIn: [linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223](https://www.linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223)
+
+Se você gostou deste projeto, sinta-se à vontade para explorar mais repositórios ou entrar em contato para colaborações!
+
