@@ -42,7 +42,7 @@ Este repositório é distribuído sob a [Licença MIT](LICENSE). Sinta-se livre 
 ## 👤 Autor
 
 Desenvolvido com dedicação por **Wallace Bruno S. P. Souza**  
-📧 Entre em contato: [wallacebrunospsouza82@gmail.com](mailto:wallacebrunospsouza82@gmail.com)  
+📧 Entre em contato: [wallacebrunospsouza82@gmail.com]([mailto:wallacebrunospsouza82@gmail.com](https://mail.google.com/mail/u/0/?to=wallacebrunospsouza82@gmail.com&fbclid=PAZXh0bgNhZW0CMTEAAae_SEviIcW_1d6lnj6qiQmuJHUT5-0EXfold3PoemkZQbs7u6qADK4PX4yI4Q_aem_SEp8Hs5VhsJ5wF8JYJdsqw&fs=1&tf=cm)  
 🔗 GitHub: [@wallacebrunospsouza](https://github.com/wallacebrunospsouza)  
 💼 LinkedIn: [linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223](https://www.linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223)
 
