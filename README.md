@@ -1,13 +1,13 @@
 <h1 align="center">💌 Site Interativo de Declaração de Amor</h1>
 <p align="center">
-  Projeto pessoal que alia criatividade, sentimento e habilidades avançadas em front-end.
+  Projeto pessoal que alinha criatividade, sentimento e habilidades avançadas em front-end.
 </p>
 
 ---
 
 ## 🧠 Sobre o Projeto
 
-Este projeto foi idealizado para oferecer uma **experiência digital interativa e responsiva** que permite expressar emoções de forma única e personalizada. Mais do que uma simples página estática, o site demonstra como a tecnologia pode aproximar pessoas, unindo inovação e afeto com originalidade.
+Este projeto foi idealizado para oferecer uma **experiência digital interativa e responsiva** para minha namorada, para permitir que eu expresse emoções de forma única e personalizada. Mais do que uma simples página estática, o site demonstra como a tecnologia pode aproximar pessoas, unindo inovação e afeto com originalidade.
 
 ---
 
@@ -37,6 +37,14 @@ Este projeto foi idealizado para oferecer uma **experiência digital interativa 
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a **MIT License**, permitindo o uso, modificação e distribuição livre, desde que os devidos créditos ao autor original sejam mantidos.
+Este repositório é distribuído sob a [Licença MIT](LICENSE). Sinta-se livre para explorar, adaptar e reutilizar o conteúdo com os devidos créditos.
 
-Para mais detalhes, consulte o arquivo [LICENSE](./LICENSE) (em inglês).
+## 👤 Autor
+
+Desenvolvido com dedicação por **Wallace Bruno S. P. Souza**  
+📧 Entre em contato: [wallacebrunospsouza82@gmail.com](https://mail.google.com/mail/u/0/?to=wallacebrunospsouza82@gmail.com&fbclid=PAZXh0bgNhZW0CMTEAAae_SEviIcW_1d6lnj6qiQmuJHUT5-0EXfold3PoemkZQbs7u6qADK4PX4yI4Q_aem_SEp8Hs5VhsJ5wF8JYJdsqw&fs=1&tf=cm)  
+🔗 GitHub: [@wallacebrunospsouza](https://github.com/wallacebrunospsouza)  
+💼 LinkedIn: [linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223](https://www.linkedin.com/in/wallace-bruno-santos-pereira-de-souza-a50957223)
+
+Se você gostou deste projeto, sinta-se à vontade para explorar mais repositórios ou entrar em contato para colaborações!
+
